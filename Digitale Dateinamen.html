@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Digital Filename for eAkte">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="emanuel.strobel@muenchen.de">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="html://baupla.muenchen.de/g2vbplus/VAADIN/build/indexhtml-C5QxC7nr.css">
+<link rel="stylesheet" href="html://baupla.muenchen.de/g2vbplus/VAADIN/themes/ots/styles.css">
+<title>Digitale Dateinamen</title>
+</head>
+<body>
+
+<script>
+const d = new Date();
+// Formatierung: 2025-02-18
+const isoDate = d.toISOString().split('T')[0];
+const europaDatum = d.toLocaleDateString('de-DE');
+
+function copy(that){
+var inp = document.createElement('input');
+document.body.appendChild(inp)
+inp.value = isoDate + "_" + that.textContent
+inp.select();
+document.execCommand('copy',false);
+inp.remove();
+}
+
+function appendInput(){
+var inp2 = document.createElement('input');
+document.body.appendChild(inp2)
+inp2.value = isoDate + "_" + document.getElementById('textbox_1').value
+inp2.select();
+document.execCommand('copy',false);
+inp2.remove();
+}
+
+window.updateLink = function (a){
+a.setAttribute('href', 'mailto:bestandssicherung.soz@muenchen.de?subject=Antrag%20auf%20Erhaltungssatzung%20-%20&body=Sehr%20geehrte%20Damen%20und%20Herren,%0D%0A%0Ddas%20beantrage%20Bauvorhaben%20liegt%20im%20Geltungsbereich%20einer%20Erhaltungssatzung%20nach%20§172%20BauGB.%20Mit%20Antrag%20vom%20' + europaDatum + '%20wurde%20für%20das%20Bauvorhaben%20auch%20ein%20Antrag%20auf%20Erhaltungssatzung%20eingereicht.%20Wir%20leiten%20daher%20den%20beiliegenden%20Antrag%20für%20weitere%20Prüfungen%20der%20Genehmigungsfähigkeit%20und%20zum%20Vollzug%20der%20Erhaltungssatzung%20an%20sie%20weiter.%0D%0A%0DMit%20freundlichen%20Grüßen%0D%0A%0DAntragsbüro%20der%20Lokalbaukommission');
+}
+
+</script>
+
+<h1>Digitale Dateinamen</h1>
+
+<h2><b>Benutzereingabe</b></h2>
+<input type="text" maxlength="512" id="textbox_1" class="searchField"/>
+<button type="button" onclick="appendInput()">Kopieren</button><br/>
+
+<h2><b>Amtlicher Lageplan</b></h2>
+<button type="button" onclick="copy(this)">antrag_vorbescheid</button><br/>
+<button type="button" onclick="copy(this)">Altlasten</button><br/>
+<button type="button" onclick="copy(this)">Amtl_Lageplan</button><br/>
+<button type="button" onclick="copy(this)">Amtl_Lageplan_Anschreiben_Kommunalreferat_Geodaten Service</button><br/>
+<button type="button" onclick="copy(this)">Amtl_Lageplan_Auszug_Liegenschaftskataster</button><br/>
+<button type="button" onclick="copy(this)">Amtl_Lageplan_Deckblatt</button><br/>
+<button type="button" onclick="copy(this)">Amtl_Lageplan_Stadtgrundkarte</button><br/>
+<button type="button" onclick="copy(this)">Amtl_Lageplan_Zeichenerklaerung_Stadtgrundkarte</button><br/>
+<button type="button" onclick="copy(this)">Amtl_Lageplan_Thematische Karte_Planungsrecht</button><br/>
+<button type="button" onclick="copy(this)">Stadtgrundkarte</button><br/>
+<button type="button" onclick="copy(this)">Auszug_Liegenschaftskataster</button><br/>
+
+<h2><b>Bauvorlagen</b></h2>
+<button type="button" onclick="copy(this)">Plan_Bestand</button><br/>
+<button type="button" onclick="copy(this)">Grundriss_EG_OG_DG</button><br/>
+<button type="button" onclick="copy(this)">Lageplan</button><br/>
+<button type="button" onclick="copy(this)">Plan_gesamt</button><br/>
+<button type="button" onclick="copy(this)">AF_Plan</button><br/>
+<button type="button" onclick="copy(this)">Grundriss</button><br/>
+<button type="button" onclick="copy(this)">Grundriss_UG</button><br/>
+<button type="button" onclick="copy(this)">Grundriss_EG</button><br/>
+<button type="button" onclick="copy(this)">Grundriss_OG_01</button><br/>
+<button type="button" onclick="copy(this)">Grundriss_OG</button><br/>
+<button type="button" onclick="copy(this)">Grundriss_DG</button><br/>
+<button type="button" onclick="copy(this)">Dachaufsicht</button><br/>
+<button type="button" onclick="copy(this)">Schnitt</button><br/>
+<button type="button" onclick="copy(this)">Schnitte_Ansichten</button><br/>
+<button type="button" onclick="copy(this)">Schnitt_AA</button><br/>
+<button type="button" onclick="copy(this)">Schnitt_BB</button><br/>
+<button type="button" onclick="copy(this)">Ansichten</button><br/>
+<button type="button" onclick="copy(this)">Ansicht_Sued</button><br/>
+<button type="button" onclick="copy(this)">Ansicht_West</button><br/>
+<button type="button" onclick="copy(this)">Ansicht_Ost</button><br/>
+<button type="button" onclick="copy(this)">Ansicht_Nord</button><br/>
+<button type="button" onclick="copy(this)">Ansichten_Haus_01</button><br/>
+
+<h2><b>Baum und Freifl.</b></h2>
+<button type="button" onclick="copy(this)">Baumbestandserklaerung</button><br/>
+<button type="button" onclick="copy(this)">Antrag_Baumfaellung_Baumveraenderung</button><br/>
+<button type="button" onclick="copy(this)">Baumbestandsplan</button><br/>
+<button type="button" onclick="copy(this)">Gutachten_Baumbestand</button><br/>
+<button type="button" onclick="copy(this)">Baumbestandsplan_FFG_Plan</button><br/>
+<button type="button" onclick="copy(this)">FFG_Plan</button><br/>
+
+<h2><b>Berechnungen</b></h2>
+<button type="button" onclick="copy(this)">Berechnungen</button><br/>
+<button type="button" onclick="copy(this)">Berechnung_Baukosten</button><br/>
+<button type="button" onclick="copy(this)">Berechnung_GFZ</button><br/>
+<button type="button" onclick="copy(this)">Berechnung_GRZ</button><br/>
+<button type="button" onclick="copy(this)">Berechnung_BRI</button><br/>
+<button type="button" onclick="copy(this)">Berechnung_BGF</button><br/>
+<button type="button" onclick="copy(this)">Berechnung_GF_GR</button><br/>
+<button type="button" onclick="copy(this)">Berechnung_GFZ_GRZ</button><br/>
+<button type="button" onclick="copy(this)">Berechnung_GFZ_GRZ</button><br/>
+<button type="button" onclick="copy(this)">Berechnung_GFZ_GRZ_BRI</button><br/>
+<button type="button" onclick="copy(this)">Berechnung_GFZ_GRZ_BRI_Wohnfl_NUF</button><br/>
+<button type="button" onclick="copy(this)">Berechnung_BGF_BRI</button><br/>
+<button type="button" onclick="copy(this)">Berechnung_VG_Nachweis</button><br/>
+<button type="button" onclick="copy(this)">Berechnung_Wohnfl</button><br/>
+<button type="button" onclick="copy(this)">Berechnung_NUF</button><br/>
+<button type="button" onclick="copy(this)">Berechnung_Wohnfl_NUF</button><br/>
+<button type="button" onclick="copy(this)">Berechnung_FaStpl</button><br/>
+<button type="button" onclick="copy(this)">Berechnung_Stpl</button><br/>
+<button type="button" onclick="copy(this)">Berechnung_StpI_FaStpl</button><br/>
+<button type="button" onclick="copy(this)">Berechnung_Mobilitaetskonzept</button><br/>
+<button type="button" onclick="copy(this)">Berechnung_Barrierefreie_Wohnungen</button><br/>
+<button type="button" onclick="copy(this)">Berechnung_Standsicherheit</button><br/>
+
+<h2><b>Schreiben</b></h2>
+<button type="button" onclick="copy(this)">antrag_bau</button><br/>
+<button type="button" onclick="copy(this)">BayBo-Formblatt_Bauantrag</button><br/>
+<button type="button" onclick="copy(this)">BayBo-Formblatt_Baubeschreibung</button><br/>
+<button type="button" onclick="copy(this)">Betriebsbeschreibung</button><br/>
+<button type="button" onclick="copy(this)">Antrag_Vorbescheid</button><br/>
+<button type="button" onclick="copy(this)">Vorlage_Genehmigungsfreistellung</button><br/>
+<button type="button" onclick="copy(this)">Beseitigungsanzeige</button><br/>
+<button type="button" onclick="copy(this)">Abstandsflaechenuebernahme</button><br/>
+<button type="button" onclick="copy(this)">Abstandsflaechenuebernahme_Plan</button><br/>
+<button type="button" onclick="copy(this)">Erhebungsbogen_Baugenehmigung</button><br/>
+<button type="button" onclick="copy(this)">Erhebungsbogen_Baugenehmigung_Tiefgarage</button><br/>
+<button type="button" onclick="copy(this)">Erhebungsbogen_Baugenehmigung_Haus_01</button><br/>
+<button type="button" onclick="copy(this)">Befreiung_Antrag_01</button><br/>
+<button type="button" onclick="copy(this)">Abweichung_Antrag</button><br/>
+<button type="button" onclick="copy(this)">Abweichung_01_Antrag</button><br/>
+<button type="button" onclick="copy(this)">Befreiung_Antrag</button><br/>
+<button type="button" onclick="copy(this)">Erhaltungssatzung_Antrag</button><br/>
+<button type="button" onclick="copy(this)">Denkmalschutz_Erlaubnis</button><br/>
+<button type="button" onclick="copy(this)">Aenderungsantrag_Anlage</button><br/>
+<button type="button" onclick="copy(this)">Statikpruefung_Verzicht</button><br/>
+<button type="button" onclick="copy(this)">Auszug_LSK</button><br/>
+<button type="button" onclick="copy(this)">Nachweis_Grundstueckserschl_Entwaesserung</button><br/>
+<button type="button" onclick="copy(this)">Bescheinigung_WP_TA_Laerm</button><br/>
+<button type="button" onclick="copy(this)">SWM_Technisches-Formblatt</button><br/>
+<button type="button" onclick="copy(this)">SWM_Spartenauskunft_Kanal</button><br/>
+<button type="button" onclick="copy(this)">Gutachten_Lueftung_Tiefgarage</button><br/>
+<button type="button" onclick="copy(this)">Gutachten_Schall</button><br/>
+<button type="button" onclick="copy(this)">Gutachten_Verkehr</button><br/>
+<button type="button" onclick="copy(this)">BSN</button><br/>
+<button type="button" onclick="copy(this)">BSN_Plan</button><br/>
+<button type="button" onclick="copy(this)">Kriterienkatalog</button><br/>
+<button type="button" onclick="copy(this)">Erklaerung_Standsicherheit</button><br/>
+<button type="button" onclick="copy(this)">Erklaerung_Brandschutz</button><br/>
+<button type="button" onclick="copy(this)">Schreiben</button><br/>
+<button type="button" onclick="copy(this)">Bebauungsplan_211a</button><br/>
+<button type="button" onclick="copy(this)">Anschreiben</button><br/>
+<button type="button" onclick="copy(this)">E-Mail_Schriftverkehr</button><br/>
+<button type="button" onclick="copy(this)">Vollmacht</button><br/>
+<button type="button" onclick="copy(this)">VB_Fragen</button><br/>
+<button type="button" onclick="copy(this)">Nachbarliste</button><br/>
+<button type="button" onclick="copy(this)">HR_Auszug</button><br/>
+<button type="button" onclick="copy(this)">Urkunde_notariell</button><br/>
+<button type="button" onclick="copy(this)">Grundbuchauszug</button><br/>
+<button type="button" onclick="copy(this)">Werbeanlagen_Plan</button><br/>
+<button type="button" onclick="copy(this)">Werbeanlagen_Visualisierung</button><br/>
+<button type="button" onclick="copy(this)">Fotos_Bestand</button><br/>
+
+<h2><b>Erhaltungssatzung</b></h2>
+<a href="#" onclick="updateLink(this)" >Mail an Bestandssicherung – LHM</a>
+<br/><br/>
+
+</body>
+</html>
